@@ -3,7 +3,7 @@ import { hot } from "react-hot-loader";
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import "./../assets/scss/App.scss";
-import { Register } from "./Authentication/Register";
+import { Register } from "./authentication/Register";
 import { NotFound } from './NotFound';
 import { LogIn } from "./authentication/LogIn";
 import { Dashboard } from "./dashboard/Dashboard";
