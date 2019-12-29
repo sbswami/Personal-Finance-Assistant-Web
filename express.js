@@ -6,6 +6,6 @@ const sourceDir = 'dist';
 app.use(express.static(sourceDir));
 
 app.listen(portNumber, () => {
-  console.log(`Express web server started: http://localhost:${portNumber}`);
+  console.log(`Express web server started: http://0.0.0.0:${portNumber}`);
   console.log(`Serving content from /${sourceDir}/`);
 });

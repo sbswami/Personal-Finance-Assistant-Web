@@ -1,5 +1,5 @@
-const API_URL = 'http://localhost:3000';
-export const SOCKET_URL = 'http://localhost:3000';
+const API_URL = 'http://0.0.0.0:3000';
+export const SOCKET_URL = 'http://0.0.0.0:3000';
 
 const USER_API = API_URL + '/users';
 
