@@ -49,8 +49,6 @@
     "image-webpack-loader": "^6.0.0",
     "jest": "^24.9.0",
     "node-sass": "^4.13.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
     "react-hot-loader": "^4.12.18",
     "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
@@ -64,5 +62,13 @@
     "webpack-dev-server": "^3.9.0",
     "webpack-merge": "^4.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@material-ui/core": "^4.8.0",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/pickers": "^3.2.8",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "socket.io-client": "^2.3.0"
+  }
 }

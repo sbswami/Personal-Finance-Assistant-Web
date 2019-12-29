@@ -1,5 +1,4 @@
-# React Webpack Typescript Starter
-> Minimal starter with hot module replacement (HMR) for rapid development.
+# Personal Finance Assistant Web
 
 * **[React](https://facebook.github.io/react/)** (16.x)
 * **[Webpack](https://webpack.js.org/)** (4.x)
