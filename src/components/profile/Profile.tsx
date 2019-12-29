@@ -57,28 +57,30 @@ export function Profile() {
       if (navigator.appVersion.indexOf("Mac") != -1) OSName = "MacOS";
       if (navigator.appVersion.indexOf("X11") != -1) OSName = "UNIX";
       if (navigator.appVersion.indexOf("Linux") != -1) OSName = "Linux";
-      if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(position => {
-          geo.lon = position.coords.longitude;
-          geo.let = position.coords.latitude;
-          let screenLog = {
-            screen: 'profile',
-            browser: 'Chrome',
-            country: 'IN',
-            geo,
-            os: OSName,
-            timeSpent: ((new Date()).getTime() - Number(localStorage.getItem('profile-start')))/1000,
-            userId: userData.id,
-            fullName: userData.fullName,
-            dob: userData.dob,
-            phone: userData.phone,
-            email: userData.email,
-            businessName: userData.businessName,
-          };
-          console.log(screenLog);
-          socket.socket.emit('user-track', screenLog);
-        });
-      }
+      let screenLog = {
+        screen: 'profile',
+        browser: 'Chrome',
+        country: 'IN',
+        geo,
+        os: OSName,
+        timeSpent: ((new Date()).getTime() - Number(localStorage.getItem('profile-start')))/1000,
+        userId: userData.id,
+        fullName: userData.fullName,
+        dob: userData.dob,
+        phone: userData.phone,
+        email: userData.email,
+        businessName: userData.businessName,
+      };
+      console.log(screenLog);
+      socket.socket.emit('user-track', screenLog);
+      /// TODO: SSL wasn't applied | Add SSL and use it
+      // if (navigator.geolocation) {
+      //   navigator.geolocation.watchPosition(position => {
+      //     geo.lon = position.coords.longitude;
+      //     geo.let = position.coords.latitude;
+          
+      //   });
+      // }
     };
   }, [userData]);
 
