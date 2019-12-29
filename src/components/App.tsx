@@ -14,9 +14,9 @@ class App extends React.Component<{}, undefined> {
       <div className='root'>
         <Router>
           <Switch>
+            <Route exact path="/login" component={LogIn} />
+            <Route exact path="/home" component={Dashboard} />
             <Route exact path="/" component={Register} />
-            <Route path="/login" component={LogIn} />
-            <Route path="/home" component={Dashboard} />
             <Route component={NotFound} />
           </Switch>
         </Router>

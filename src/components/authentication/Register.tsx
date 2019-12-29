@@ -87,7 +87,7 @@ export function Register() {
         return (
           <Grid item>
             <Button variant='contained' color='primary'
-              onClick={() => this.props.history.push('/login')}
+              onClick={() => routeProps.history.push('/login')}
             >
               Go To Login!
             </Button>
@@ -120,6 +120,13 @@ export function Register() {
                   {getStepContent(activeStep, routeProps)}
                 </Grid>
                 <Grid item container justify='flex-end'>
+                  <Button
+                  variant='contained'
+                  color='secondary'
+                  onClick={() => routeProps.history.push('/login')}
+                  className={classes.button}>
+                    LogIn
+                    </Button>
                   {activeStep === steps.length || (
                     <div>
                       <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
