@@ -123,6 +123,16 @@ export function Register() {
                   <Button
                   variant='contained'
                   color='secondary'
+                  onClick={() => {
+                    window.location.href = 'http://localhost:3000/users/auth/google';
+                  }}
+                  className={classes.button}
+                  >
+                    Sign Up with Google
+                  </Button>
+                  <Button
+                  variant='contained'
+                  color='secondary'
                   onClick={() => routeProps.history.push('/login')}
                   className={classes.button}>
                     LogIn
