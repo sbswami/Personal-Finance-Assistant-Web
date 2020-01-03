@@ -25,7 +25,6 @@ export function Profile() {
   const userDetail = () => {
     ProfileService.getDetail(
       res => {
-        console.log(res['user']);
         return setUserData(res['user']);
       },
       err => console.error(err),
@@ -36,7 +35,7 @@ export function Profile() {
     ProfileService.getUserList(
       search,
       res => setSearchList(res['data']),
-      err => console.log(err),
+      err => window.alert('Something Went Wrong!'),
     );
   }
 
@@ -47,7 +46,6 @@ export function Profile() {
       return;
     }
     return () => {
-      console.log('Component Will Unmount!');
       let OSName = "Unknown OS";
       let geo = {
         lon: 0,
@@ -71,7 +69,6 @@ export function Profile() {
         email: userData.email,
         businessName: userData.businessName,
       };
-      console.log(screenLog);
       socket.socket.emit('user-track', screenLog);
       /// TODO: SSL wasn't applied | Add SSL and use it
       // if (navigator.geolocation) {
@@ -127,7 +124,7 @@ export function Profile() {
         <Divider />
         {searchList.map(singleUserDetail => {
           return (
-            <React.Fragment>
+            <React.Fragment key={singleUserDetail.id}>
               <SingleUserDetail {...singleUserDetail} />
               <Divider />
             </React.Fragment>

@@ -22,7 +22,7 @@ export function LogIn() {
         localStorage.setItem(TOKEN_KEY, `JWT ${res['token']}`);
         routeProps.history.push('/home');
       },
-      err => console.log(err),
+      err => window.alert('Something Went Wrong!'),
     );
   };
 

@@ -44,21 +44,6 @@ export function Dashboard() {
     routeProps.history.push('/login');
   }
 
-  // React.useEffect(() => {
-  //   return () => {
-  //     console.log('Component Will Unmount!');
-  //     socket.socket.emit('user-track', {
-  //       screen: 'profile',
-  //       browser: '',
-  //       geo: '',
-  //       os: '',
-  //       timeSpent: '',
-  //       userId: '',
-  //     });
-  //     // socket.emit('register-page', 'Swami HERE Again!');
-  //   };
-  // });
-
   return (
     <Route render={routeProps => (
       <div className={classes.root}>

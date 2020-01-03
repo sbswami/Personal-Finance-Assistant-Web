@@ -36,11 +36,10 @@ export function Register() {
     AuthService.registerUser(
       user,
       res => {
-        console.log(res);
         increaseStep();
       },
       err => {
-        console.log(err);
+        window.alert('Something Went Wrong!');
       }
     );
   };
